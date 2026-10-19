@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "Bahnschrift", "Segoe UI", sans-serif;
+  color: #182521;
+  background: #f4f3ed;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  --ink: #182521;
+  --muted: #737a72;
+  --paper: #fffefa;
+  --line: #dcded5;
+  --green: #245b43;
+  --green-light: #e8efe8;
+  --orange: #e56d3e;
+  --red: #a33a2c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #e56d3e;
+  outline-offset: 2px;
+}
+
+::selection {
+  color: #fffefa;
+  background: #245b43;
+}

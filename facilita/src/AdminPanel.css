@@ -1,0 +1,501 @@
+.admin-shell {
+    min-height: 100vh;
+}
+
+.admin-panel {
+    width: min(100%, 1280px);
+    margin: 0 auto;
+    padding: 28px 0 72px;
+    color: var(--ink);
+}
+
+.admin-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+}
+
+.admin-header h1,
+.admin-auth h1,
+.admin-empty h1 {
+    margin: 5px 0 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.admin-kicker {
+    display: block;
+    color: var(--green);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.admin-header-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.admin-back {
+    min-height: 44px;
+    margin: 0 0 24px;
+    padding: 0 9px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 0;
+    color: var(--green);
+    background: transparent;
+    font-weight: 700;
+}
+
+.admin-intro,
+.admin-muted {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.admin-toolbar {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(130px, 1fr));
+    gap: 12px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.admin-toolbar label,
+.admin-auth label {
+    display: grid;
+    gap: 6px;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.admin-toolbar select,
+.admin-toolbar input,
+.admin-auth input,
+.review-row input,
+.roster-section input {
+    width: 100%;
+    min-height: 44px;
+    padding: 0 10px;
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    color: var(--ink);
+    background: var(--paper);
+    font-size: 13px;
+}
+
+.admin-summary {
+    padding: 13px 0;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.admin-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    border-top: 1px solid var(--line);
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 12px;
+}
+
+.admin-table th {
+    height: 40px;
+    color: #737a72;
+    background: #eeeee8;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .35px;
+}
+
+.admin-table td,
+.admin-table th {
+    padding: 8px 12px;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--line);
+}
+
+.admin-table td {
+    height: 48px;
+}
+
+.admin-empty-cell {
+    padding: 26px !important;
+    color: var(--muted);
+    text-align: center;
+}
+
+.admin-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 7px;
+    border-radius: 3px;
+    color: #75522b;
+    background: #f6eddf;
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.admin-status.status-received {
+    color: var(--green);
+    background: var(--green-light);
+}
+
+.admin-export {
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 8px;
+    border: 1px solid #b7c7b8;
+    border-radius: 3px;
+    color: var(--green);
+    background: transparent;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.admin-section {
+    margin-top: 28px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+}
+
+.admin-section-heading {
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.admin-section-heading h2 {
+    margin: 4px 0 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.admin-section-heading>span {
+    min-width: 28px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: var(--green);
+    background: var(--green-light);
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.expiry-list {
+    border-top: 1px solid var(--line);
+}
+
+.expiry-row {
+    min-height: 60px;
+    display: grid;
+    grid-template-columns: 150px minmax(180px, 1fr) 70px;
+    align-items: center;
+    gap: 14px;
+    border-bottom: 1px solid var(--line);
+}
+
+.expiry-date,
+.expiry-product {
+    min-width: 0;
+    display: grid;
+    gap: 4px;
+}
+
+.expiry-date strong,
+.expiry-quantity {
+    font-size: 12px;
+}
+
+.expiry-product strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+}
+
+.expiry-product span {
+    overflow: hidden;
+    color: var(--muted);
+    font-family: Consolas, monospace;
+    font-size: 10px;
+    text-overflow: ellipsis;
+}
+
+.expiry-quantity {
+    text-align: right;
+}
+
+.expiry-tag {
+    width: max-content;
+    padding: 3px 5px;
+    border-radius: 2px;
+    color: var(--green);
+    background: var(--green-light);
+    font-size: 8px;
+    font-weight: 800;
+}
+
+.expiry-tag.vencido {
+    color: white;
+    background: #a33a2c;
+}
+
+.expiry-tag.ate-7-dias {
+    color: #8a432b;
+    background: #f7e7dd;
+}
+
+.expiry-tag.ate-15-dias {
+    color: #775a21;
+    background: #f6efd9;
+}
+
+.review-row {
+    min-height: 66px;
+    display: grid;
+    grid-template-columns: 155px minmax(180px, 1fr) 115px;
+    align-items: center;
+    gap: 12px;
+    border-top: 1px solid var(--line);
+}
+
+.review-row>div {
+    display: grid;
+    gap: 4px;
+    min-width: 0;
+}
+
+.review-row strong {
+    font-family: Consolas, monospace;
+    font-size: 11px;
+}
+
+.review-row span {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.review-row .button,
+.roster-section .button {
+    min-height: 44px;
+    padding: 0 11px;
+    font-size: 11px;
+}
+
+.import-button {
+    min-height: 48px;
+    padding: 0 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #9eb3a1;
+    border-radius: 3px;
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.import-button:hover {
+    background: var(--green-light);
+}
+
+.import-button input {
+    display: none;
+}
+
+.admin-management-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.roster-section form {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px;
+}
+
+.roster-list {
+    margin-top: 8px;
+}
+
+.roster-row {
+    min-height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border-top: 1px solid var(--line);
+    font-size: 12px;
+}
+
+.roster-toggle {
+    min-height: 32px;
+    padding: 0 9px;
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    color: var(--muted);
+    background: transparent;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.roster-toggle.active {
+    color: var(--green);
+    border-color: #b3c6b5;
+    background: var(--green-light);
+}
+
+.admin-error,
+.admin-notice {
+    margin: 14px 0;
+    padding: 11px 13px;
+    border: 1px solid #edc7bf;
+    color: #742e25;
+    background: #f8e9e6;
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+.admin-notice {
+    border-color: #c4d6c4;
+    color: var(--green);
+    background: var(--green-light);
+}
+
+.admin-loading {
+    padding: 10px 0;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.admin-auth {
+    width: min(100%, 390px);
+    margin: 8vh auto 0;
+}
+
+.admin-auth h1 {
+    margin-bottom: 7px;
+}
+
+.admin-auth>p {
+    margin: 0 0 22px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.admin-auth form {
+    display: grid;
+    gap: 12px;
+}
+
+.admin-auth .admin-submit {
+    margin-top: 8px;
+    width: 100%;
+}
+
+.admin-empty {
+    width: min(100%, 560px);
+    margin: 10vh auto;
+}
+
+.admin-empty p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.admin-empty .button {
+    margin-top: 12px;
+}
+
+.admin-panel :focus-visible {
+    outline-offset: 2px;
+}
+
+@media (max-width: 850px) {
+    .admin-panel {
+        padding-top: 20px;
+    }
+
+    .admin-toolbar {
+        grid-template-columns: repeat(2, minmax(130px, 1fr));
+    }
+}
+
+@media (max-width: 620px) {
+    .admin-panel {
+        padding: 18px 0 54px;
+    }
+
+    .admin-header h1,
+    .admin-auth h1,
+    .admin-empty h1 {
+        font-size: 27px;
+    }
+
+    .admin-toolbar {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .admin-management-grid {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .review-row {
+        grid-template-columns: 1fr auto;
+        padding: 9px 0;
+    }
+
+    .review-row>div {
+        grid-column: 1 / -1;
+    }
+
+    .review-row input {
+        grid-column: 1;
+    }
+
+    .review-row .button {
+        grid-column: 2;
+    }
+
+    .expiry-row {
+        grid-template-columns: 112px minmax(0, 1fr) 46px;
+        gap: 8px;
+    }
+
+    .expiry-product strong {
+        font-size: 11px;
+    }
+
+    .expiry-product span {
+        font-size: 9px;
+    }
+
+    .admin-empty {
+        padding: 0 6px;
+    }
+}
